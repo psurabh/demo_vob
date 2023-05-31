@@ -72,7 +72,7 @@ pipeline {
         }
 
 
-    stage('Run Tests') {
+    stage('Run Sanity Tests') {
              steps {
                 // Run pytest inside a Docker container
                 sh 'docker run --rm pradeei/chatgpt:latest pytest'
