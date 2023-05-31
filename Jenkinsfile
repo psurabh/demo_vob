@@ -1,7 +1,7 @@
 pipeline {
     agent {
         node {
-          label 'DevCloud-LAB-Agent-2'
+          label 'any jenkins node'
          }
     }
     
