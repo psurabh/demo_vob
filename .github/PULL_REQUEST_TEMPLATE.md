@@ -1,8 +1,10 @@
+_The PR review is to check for sustainability and correctness.  Sustainability is actually more business critical as correctness is largely tested into the code over time.   Its useful to keep in mind that SW often outlives the HW it was written for and engineers move from job to job so it is critical that code developed be supportable across many years.  It is up to the submitter and reviewer to look at the code from a perspective of what if we have to debug this 3 years from now after the author is no longer available and defect databases have been lost.  Yes, that happens all the time when we are working with time scales of more than 2 years.  When reviewing your code it is important to look at it from this perspective._
+
 Author Mandatory (to be filled by PR Author/Submitter)
 ------------------------------------------------------
 - Developer who submits the Pull Request for merge is required to mark the checklist below as applicable for the PR changes submitted.  
 - Those checklist items which are not marked are considered as not applicable for the PR change.  
-- Items marked with an asterisk suffix are mandatory items to check and if not marked will be treated as non-compliant pull requests by the developers for compliance
+- Items marked with an asterisk suffix are mandatory items to check and if not marked will be treated as non-compliant pull requests by the developers for Inner Source Development Model (ISDM) compliance
 
 ### PULL DESCRIPTION
 _Provide a 1-2 line brief overview of the changes submitted through the Pull Request..._
@@ -12,19 +14,20 @@ _Provide a 1-2 line brief overview of the changes submitted through the Pull Req
 | Info | Please fill out this column |
 | ------ | ----------- |
 | Root Cause | Node details update was adding extra '-' in case of no variant |
-| Internal Impact | Update affects data contract in |
-| External Impact | Update affects  and deploy method |
+| Internal Impact | Update affects data contract in getEdgeNode API |
+| External Impact | Update affects frontend-ms and deploy method in byoc-ms |
 
 ### REFERENCES
 Reference URL for issue tracking (JIRA/HSD/Github): **\<URL to be filled>  **
-- [ ] **_Added label to the Pull Request following the template: PIS\_\<Complexity>\*_** \
+- [ ] **_Added label to the Pull Request following the template: ISDM\_\<Complexity>\*_** \
 	Note-1: Depending on complexity of code changes, use the suitable word for complexity: Low/Medium/High \
-	Example: PR for Slim boot loader project with medium complexity can have the label as: PIS
+	Example: PR for Slim boot loader project with medium complexity can have the label as: ISDM_Medium
 	
 - [ ] Added label to the Pull Request for easier discoverability and search
 
 ### CODE MAINTAINABILITY
 - [ ] **_Commit Message meets guidelines as indicated in the URL\*_**
+	- https://github.com/edgexfoundry/edgex-go/blob/main/.github/Contributing.md
 - [ ] **_Every commit is a single defect fix and does not mix feature addition or changes\*_**
 - [ ] Added required new tests relevant to the changes
 	- [ ] PR contains URL links to functional tests executed with the new tests 
