@@ -10,6 +10,6 @@ Run a docker build in path legacy/2.8/ubuntu1804/cuda10.2/devel
 Push the image to https://hub.docker.com/repository/docker/pradeei/chatgpt/ 
 Run a test using pytest on docker image and generate a nice test report in .csv  & .html format 
 Run a bandit scan https://hub.docker.com/r/opensorcery/bandit 
-Generate a scan report in .csv format 
+Generate a bandit scan report in .csv & .html format 
 Need the pipeline to send notifications to the user post completion 
 Cleanup the workspace 
