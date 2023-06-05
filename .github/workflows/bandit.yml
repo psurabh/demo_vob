@@ -3,7 +3,7 @@ name: Bandit Scan
 on:
   push:
     branches:
-      - main
+      - psurabh-patch-10
 
 jobs:
   build:
