@@ -1,0 +1,37 @@
+name: Bandit Scan
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ds-devops02
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+      with:
+        repository: fergalwalsh/pico
+
+    - name: Setup Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.x'
+
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+
+    - name: Run Bandit scan
+      run: |
+        mkdir -p reports
+        bandit -f csv -o reports/bandit_scan.csv -r .
+
+    - name: Upload Bandit report
+      uses: actions/upload-artifact@v2
+      with:
+        name: bandit-report
+        path: reports/bandit_scan.csv
