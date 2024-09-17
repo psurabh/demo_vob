@@ -4,7 +4,7 @@ Create a workspace folder in home dir using the sudo command
 Provide adequate permissions to that folder 
 Define the home dir as a variable 
 Clone the code into the workspace https://github.com/stereolabs/zed-docker.git 
-Print the folder path 
+Print the workspace path 
 Docker login using token "dckr_pat_BY8afnlGmK9BbqvSKMy4bHNs3S0" https://hub.docker.com/repository/docker/pradeei/chatgpt 
 Run a docker build in path legacy/2.8/ubuntu1804/cuda10.2/devel 
 Push the image to https://hub.docker.com/repository/docker/pradeei/chatgpt/ 
